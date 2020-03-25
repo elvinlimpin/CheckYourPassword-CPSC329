@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Welcome to Firebase Hosting</title>
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/7.12.0/firebase-app.js"></script>
+    <script defer src="/__/firebase/init.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/hsimp.css">
+
+    <style>
+      body {
+          font-family: sans-serif;
+          font-size: 1em;
+          font-weight: 300;
+      }
+
+      input {
+          font-family: sans-serif;
+          font-size: 1em;
+          font-weight: 300;
+          color: #888;
+          border: 1px solid #bbb;
+          border-radius: 3px;
+          padding: 0.25em 10px;
+          line-height: 1.5em;
+      }
+
+      label::after {
+          content: ":";
+      }
+
+      div {
+          margin-bottom: 10px;
+      }
+
+      .hsimp-time {
+          display: inline;
+          margin-left: 10px;
+      }
+
+      .hsimp-checks li {
+          list-style: none;
+      }
+
+      .hsimp-checks h2 {
+          font-size: 0.8em;
+          margin-bottom: 0;
+      }
+
+      .hsimp-checks p {
+          margin-top: 0;
+          font-size: 0.7em;
+      }
+  </style>
+  </head>
+  <body>
+      <label>Password</label>
+      <input id="password-box" type="password" />
+      <div id="password-time" class="hsimp-time"></div>
+      <ul id="password-checks" class="hsimp-checks"></ul>
+
+      <script src="/js/hsimp.min.js"></script>
+      <script src="/js/script.js"></script>
+  </body>
+</html>
