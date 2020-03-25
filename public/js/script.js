@@ -1,5 +1,4 @@
-
-(function (doc) {
+;(function (doc) {
 var passwordInput = doc.getElementById("password-box"),
     timeDiv = doc.getElementById("password-time"),
     checksList = doc.getElementById("password-checks");
@@ -47,6 +46,50 @@ hsimp.setDictionary({
 
 // Run the HSIMP
 attachTo(passwordInput);
+
+const passwords = [
+    "H3ll@WRLD!",
+    "b106-8e3b14-bd1d",
+    "plank%tiredSun#broccoli",
+    "EstasParkeandoMiTroka?",
+    "1d4Nf62c4e63Nf3Bb4+",
+    "Talonflame@ChoiceBand GaleWings",
+    "CGBP:1@RPE8,2xAMRAP@80%"
+]
+
+function toClipboard(text) {
+    const textArea = document.createElement("textarea")
+    textArea.value = text
+    document.body.appendChild(textArea)
+    textArea.select()
+
+    return {result: document.execCommand('copy'), textArea: textArea}
+} 
+  
+
+$(document).ready(() => {
+
+    for(var i = 0; i < passwords.length; i++) {
+        $(`#p${i}box`).html(passwords[i])
+    }
+
+    $('.try-password').click(({target: {id}}) => {
+        const idx = id.substring(1)
+        
+        const {result, textArea} = toClipboard(passwords[idx])
+        
+        console.log($(`#${id}`).html())
+        $(textArea).hide()
+        $(`#${id}`).html('copied!')
+
+        for(var i = 0; i < passwords.length; i++) {
+            if(i != idx) {
+                // console.log(`#p${i}`)
+                $(`#p${i}`).html('copy password')
+            }
+        }
+    })
+}) 
 
 // firebase
 

@@ -1,0 +1,80 @@
+body {
+    font-family: sans-serif;
+    font-size: 1em;
+    font-weight: 400;
+}
+
+input {
+    font-family: sans-serif;
+    font-size: 1em;
+    font-weight: 400;
+    color: #888;
+    border: 1px solid #bbb;
+    border-radius: 3px;
+    padding: 0.25em 10px;
+    line-height: 1.5em;
+}
+
+label::after {
+    content: ":";
+}
+
+div {
+    margin-bottom: 10px;
+}
+
+.hsimp-time {
+    display: inline;
+    margin-left: 10px;
+}
+
+.hsimp-checks li {
+    list-style: none;
+}
+
+.hsimp-checks h2 {
+    font-size: 0.8em;
+    margin-bottom: 0;
+}
+
+.hsimp-checks p {
+    margin-top: 0;
+    font-size: 0.7em;
+}
+
+a {
+    text-decoration: underline!important;
+    color: #072452 !important;
+}
+
+p {
+    font-size: 0.8em!important;
+}
+
+.card-main {
+    margin-top: 20px!important;
+}
+
+.smaller {
+    font-size: 0.8em!important;
+}
+
+h5{
+    font-family: monospace;
+    border: 1px solid grey;
+    padding: 0.5em;
+    text-align: center;
+}
+
+.try-password {
+    text-align: right;
+    font-size: 0.8em;
+}
+
+.note {
+    font-size: 0.8em!important;
+}
+
+h4 {
+    text-align: center;
+}
