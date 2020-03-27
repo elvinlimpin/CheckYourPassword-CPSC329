@@ -89,6 +89,28 @@ $(document).ready(() => {
             }
         }
     })
+    
+    $('.tips').hide()
+    $('#explanations').hide()
+
+    const LEARN_MORE_FLAG = false
+
+    function showInfo() {
+        if($('#password-checks').html() !== '' && !LEARN_MORE_FLAG) {
+            $('.tips').show(500)
+        } else {
+            $('.tips').hide()
+        }
+    }
+    $('#password-checks').bind("DOMSubtreeModified", _.debounce(showInfo, 250))
+
+    $('#learn-more').click(() => {
+        $('.tips').hide()
+
+        $('#explanations').show(1000)
+        LEARN_MORE_FLAG = true
+
+    })
 }) 
 
 // firebase
