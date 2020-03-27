@@ -16,6 +16,11 @@
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js" integrity="sha256-G7A4JrJjJlFqP0yamznwPjAApIKPkadeHfyIwiaa9e0=" crossorigin="anonymous"></script>
+    <script
+      src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+      integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+      crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="/css/style.css">
 
@@ -23,14 +28,15 @@
   <body>
     <div class="container">
       <div class="row">
+        <div class="col-md-2"></div>
         <div class="col-md-8">
           <div class="left-bar card card-body bg-light  card-main">
-            <h4 class="card-title">Check Your Passwords</h4>
+            <h4 class="card-title">Check You Password Strength</h4>
             <br>
             <br>
             <h6
               style="text-align: center"
-            >Lets get you started with entering your password below:</h6>
+            >Lets get you started by entering your password below:</h6>
             <br>
             <input
               id="password-box"
@@ -39,207 +45,215 @@
             />
             <div id="password-time" class="hsimp-time"></div>
             <ul id="password-checks" class="hsimp-checks"></ul>
-            <br>
-            <h5>So how was the stength of the password?</h5>
-            <h5>Is it what you have expected?</h5>
-            <h5>If you are not happy, follow the information below to make the password stronger.</h5>
+
+            <div class='tips'>
+              <br>
+              <h6>How was the strength of your password?</h6>
+              <p>If this is not what you expected, click learn more for information on how to improve your password.</p>
+              <p style="text-align: center" >
+                <a href="#explanations" id="learn-more">Learn More</a>
+              </p>
+            </div>
+
             <script src="/js/hsimp.min.js"></script>
             <script src="/js/script.js"></script>
-            <p>
-              Us human beings are very inclined to use passwords that contain common dictionary words. This especially applies to English words, mainly because English is a universal language (especially on the internet), which greatly increases the chance of many different users using the same words in their passwords. But this shouldn’t stop you from trying to create good memorable passwords. There are passwords which are easy for humans to remember, but very difficult for computers to crack.
-            </p>
-
-              <a style="text-align: center;" class="smaller" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-                Click here to reveal some principles that can help with creating <strong>memorable</strong> but <strong>strong</strong> passwords.
-              </a>
-              <div class="collapse" id="collapseExample">
-                <div class="card card-body">
-                  <ol>
-                    <li class="smaller"><!-- 1 -->
-                      <strong>Keep your password a secret.</strong> Please!
-                    </li>
-                    <li class="smaller">
-                      Use at least 3 moderate length words that you will remember in your password.
-                      <ul>
-                        <li class="smaller">
-                          Try to pick words which others may not be able to easily guess. Keep it personal.
-                        </li>
-                        <li class="smaller">
-                          You may be able to use sentences, but be careful to ensure that it is a unique and special sentence. (ie. not ILoveYou)
-                        </li>
-                      </ul>
-      
-                    </li>
-                    <li class="smaller"><!-- 2 -->
-                      If you know multiple languages, use a combination of those languages.
-                      <ul>
-                        <li class="smaller">
-                          Completely made-up words which you can remember are good too.
-                        </li>
-                        <li class="smaller">
-                          If unique enough, notation from niche domains might also work. Check the examples for what we mean here.
-                        </li>
-                      </ul>
-      
-                      <li class="smaller"> <!-- 3 -->
-                        Use numbers, capital characters, and special characters <strong>which you won't forget</strong>.
+            <div id="explanations">
+              <hr>
+              <p>
+                Us human beings are very inclined to use passwords that contain common dictionary words. This especially applies to English words, mainly because English is a universal language (especially on the internet), which greatly increases the chance of many different users using the same words in their passwords. But this shouldn’t stop you from trying to create good memorable passwords. There are passwords which are easy for humans to remember, but very difficult for computers to crack.
+              </p>
+  
+                <a style="text-align: center;" class="smaller" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                  Click here to reveal some principles that can help with creating <strong>memorable</strong> but <strong>strong</strong> passwords.
+                </a>
+                <div class="collapse" id="collapseExample">
+                  <div class="card card-body">
+                    <ol>
+                      <li class="smaller"><!-- 1 -->
+                        <strong>Keep your password a secret.</strong> Please!
                       </li>
-      
-                      <li class="smaller"> <!-- 4 -->
-                        Use different passwords in different websites.
-      
+                      <li class="smaller">
+                        Use at least 3 moderate length words that you will remember in your password.
                         <ul>
                           <li class="smaller">
-                            I know this will make remembering passwords tougher, but it’s worth it.
+                            Try to pick words which others may not be able to easily guess. Keep it personal.
+                          </li>
+                          <li class="smaller">
+                            You may be able to use sentences, but be careful to ensure that it is a unique and special sentence. (ie. not ILoveYou)
                           </li>
                         </ul>
-                      </li>
-      
-                      <li class="smaller"> <!-- 5 -->
-                        Use two factor authentication if the organization allows so.
-                      </li>
-                      <li class="smaller"> <!-- 6 -->
-                        If you have followed the above suggestions, your password should already be at least 16 characters. <strong>Length is strength</strong>.
-                      </li>
-                    </li>
-                  </ol>
-                </div>
-              </div>
-            
-            <br>
-            <p>
-              Now, to demonstrate power of some of the principles outlined above, try entering some of the following passwords to the strength cehcker.
-            </p>
-            <p class="note">
-              <strong>Note:</strong> don't actually use any of these example passwords
-            </p>
-
-            <div class="left-bar card card-body">
-              <h5 class="card-title"><span id="p0box"></span></h5>
-              <a href="#"  onclick="return false;"type="submit"class="try-password" id="p0">copy password</a>
-              <ul>
-                <li>
-                  This is a <strong style="color:red">terrible</strong> password.
-                </li>
-                <li>
-                  It is over 8 characters and contains a variety of characters, but it is not easy to remember, and computers crack l33t sp3@k in no time.
-                </li>
-              </ul>
-            </div>
-
-            <div class="left-bar card card-body">
-              <h5 class="card-title"><span id="p1box"></span></h5>
-              <a href="#"  onclick="return false;"type="submit"class="try-password" id="p1">copy password</a>
-              <ul>
-                <li>
-                  An object ID variation
-                </li>
-                <li>
-                  We usually imagine this type of password to be strong
-                </li>
-                <li>
-                  However, this is a <strong style="color:red">bad</strong> password because it is not memorable.
-                </li>
-              </ul>
-            </div>
-
-            <div class="left-bar card card-body">
-              <h5 class="card-title"><span id="p2box"></span></h5>
-              <a href="#"  onclick="return false;"type="submit"class="try-password" id="p2">copy password</a>
-              <ul>
-                <li>
-                  Just four “random” english words
-                </li>
-                <li>
-                  Yet, a very strong password
-                </li>
-              </ul>
-              <p><strong>Relates to:</strong> Principles (2) and (4)</p>
-            </div>
-
-            <div class="left-bar card card-body">
-              <h5 class="card-title"><span id="p3box"></span></h5>
-              <a href="#"  onclick="return false;"type="submit"class="try-password" id="p3">copy password</a>
-              <ul>
-                <li>
-                  An uncommon Span-glish sentence
-                </li>
-                <li>
-                  Some of these words are too non-standard to appear in a Spanish Dictionary
-                </li>
-              </ul>
-              <p><strong>Relates to:</strong> Principles (2a), (2b), (3a), and (4)</p>
-            </div>
-
-            <div class="left-bar card card-body">
-              <h5 class="card-title"><span id="p4box"></span></h5>
-              <a href="#"  onclick="return false;"type="submit"class="try-password" id="p4">copy password</a>
-              <ul>
-                <li>
-                  Notation for a sequence of chess moves
-                </li>
-                <li>
-                  The more special the sequence, the better.
-                </li>
-                  This set of moves is actually not an <a href="https://en.wikipedia.org/wiki/Bogo-Indian_Defence" target="_blank">uncommon sequence</a>.
-                </li>
-              </ul>
-              <p><strong>Relates to:</strong> Principles (3b) and (4)</p>
-            </div>
-
-            <div class="left-bar card card-body">
-              <h5 class="card-title"><span id="p5box"></span></h5>
-              <a href="#"  onclick="return false;"type="submit"class="try-password" id="p5">copy password</a>
-              <ul>
-                <li>
-                  Abbreviated notation for a pokemon moveset
-                </li>
-                <li>
-                  Needless to say, do not use a common pokemon moveset
-                </li>
-              </ul>
-              <p><strong>Relates to:</strong> Principles (3b) and (4)</p>
-            </div>
-
-            <div class="left-bar card card-body">
-              <h5 class="card-title"><span id="p6box"></span></h5>
-              <a href="#"  onclick="return false;"type="submit"class="try-password" id="p6">copy password</a>
-              <ul>
-                <li>
-                  Notation for a workout routine
-                </li>
-                <li>
-                  Likewise, the more special the exercise, the better
-                </li>
-              </ul>
-              <p><strong>Relates to:</strong> Principles (3b) and (4)</p>
-            </div>
-
-            <div class="left-bar card card-body">
-              <h5 class="card-title">Your own passwords</h5>
-              <ul>
-                <li>
-                  Did it perform as well as you hoped?
-                </li>
-                <li>
-                  Were you following any of the suggested principles above?
-                </li>
-                <li>
-                  Are you going to be changing your passwords soon?
-                </li>
-              </ul>
-            </div>
-
-            <p class='note'>
-              For more informative and in-depth password guidelines, one can refer to NIST password guidelines.
-            </p>
-
-          </div>
-        </div>
-        <div class="col-md-4">
         
-        </div>
-      </div>
-    </div>
+                      </li>
+                      <li class="smaller"><!-- 2 -->
+                        If you know multiple languages, use a combination of those languages.
+                        <ul>
+                          <li class="smaller">
+                            Completely made-up words which you can remember are good too.
+                          </li>
+                          <li class="smaller">
+                            If unique enough, notation from niche domains might also work. Check the examples for what we mean here.
+                          </li>
+                        </ul>
+        
+                        <li class="smaller"> <!-- 3 -->
+                          Use numbers, capital characters, and special characters <strong>which you won't forget</strong>.
+                        </li>
+        
+                        <li class="smaller"> <!-- 4 -->
+                          Use different passwords in different websites.
+        
+                          <ul>
+                            <li class="smaller">
+                              I know this will make remembering passwords tougher, but it’s worth it.
+                            </li>
+                          </ul>
+                        </li>
+        
+                        <li class="smaller"> <!-- 5 -->
+                          Use two factor authentication if the organization allows so.
+                        </li>
+                        <li class="smaller"> <!-- 6 -->
+                          If you have followed the above suggestions, your password should already be at least 16 characters. <strong>Length is strength</strong>.
+                        </li>
+                      </li>
+                    </ol>
+                  </div>
+                </div>
+              
+              <br>
+              <p>
+                Now, to demonstrate the power of some of the principles outlined above, consider the password examples below. Some make poor use of principles, where they dont even use of any princaples above, while others do:
+              </p>
+              <p class="note">
+                <strong>Note:</strong> don't actually use any of these example passwords
+              </p>
+  
+              <div class="left-bar card card-body">
+                <h5 class="card-title"><span id="p0box"></span></h5>
+                <a href="#"  onclick="return false;"type="submit"class="try-password" id="p0">copy password</a>
+                <ul>
+                  <li>
+                    This is a <strong style="color:red">terrible</strong> password.
+                  </li>
+                  <li>
+                    It is over 8 characters and contains a variety of characters, but it is not easy to remember, and computers crack l33t sp3@k in no time.
+                  </li>
+                </ul>
+                <p><strong>Relates to:</strong> No Principles</p>
+              </div>
+  
+              <div class="left-bar card card-body">
+                <h5 class="card-title"><span id="p1box"></span></h5>
+                <a href="#"  onclick="return false;"type="submit"class="try-password" id="p1">copy password</a>
+                <ul>
+                  <li>
+                    An object ID variation
+                  </li>
+                  <li>
+                    We usually imagine this type of password to be strong
+                  </li>
+                  <li>
+                    However, this is a <strong style="color:red">bad</strong> password because it is not memorable.
+                  </li>
+                </ul>
+                <p><strong>Relates to:</strong> No Principles</p>
+              </div>
+  
+              <div class="left-bar card card-body">
+                <h5 class="card-title"><span id="p2box"></span></h5>
+                <a href="#"  onclick="return false;"type="submit"class="try-password" id="p2">copy password</a>
+                <ul>
+                  <li>
+                    Just four “random” english words
+                  </li>
+                  <li>
+                    Yet, a very strong password
+                  </li>
+                </ul>
+                <p><strong>Relates to:</strong> Principles (2) and (4)</p>
+              </div>
+  
+              <div class="left-bar card card-body">
+                <h5 class="card-title"><span id="p3box"></span></h5>
+                <a href="#"  onclick="return false;"type="submit"class="try-password" id="p3">copy password</a>
+                <ul>
+                  <li>
+                    An uncommon Span-glish sentence
+                  </li>
+                  <li>
+                    Some of these words are too non-standard to appear in a Spanish Dictionary
+                  </li>
+                </ul>
+                <p><strong>Relates to:</strong> Principles (2a), (2b), (3a), and (4)</p>
+              </div>
+  
+              <div class="left-bar card card-body">
+                <h5 class="card-title"><span id="p4box"></span></h5>
+                <a href="#"  onclick="return false;"type="submit"class="try-password" id="p4">copy password</a>
+                <ul>
+                  <li>
+                    Notation for a sequence of chess moves
+                  </li>
+                  <li>
+                    The more special the sequence, the better.
+                  </li>
+                    This set of moves is actually not an <a href="https://en.wikipedia.org/wiki/Bogo-Indian_Defence" target="_blank">uncommon sequence</a>.
+                  </li>
+                </ul>
+                <p><strong>Relates to:</strong> Principles (3b) and (4)</p>
+              </div>
+  
+              <div class="left-bar card card-body">
+                <h5 class="card-title"><span id="p5box"></span></h5>
+                <a href="#"  onclick="return false;"type="submit"class="try-password" id="p5">copy password</a>
+                <ul>
+                  <li>
+                    Abbreviated notation for a pokemon moveset
+                  </li>
+                  <li>
+                    Needless to say, do not use a common pokemon moveset
+                  </li>
+                </ul>
+                <p><strong>Relates to:</strong> Principles (3b) and (4)</p>
+              </div>
+  
+              <div class="left-bar card card-body">
+                <h5 class="card-title"><span id="p6box"></span></h5>
+                <a href="#"  onclick="return false;"type="submit"class="try-password" id="p6">copy password</a>
+                <ul>
+                  <li>
+                    Notation for a workout routine
+                  </li>
+                  <li>
+                    Likewise, the more special the exercise, the better
+                  </li>
+                </ul>
+                <p><strong>Relates to:</strong> Principles (3b) and (4)</p>
+              </div>
+  
+              <div class="left-bar card card-body">
+                <h5 class="card-title">Your own passwords</h5>
+                <ul>
+                  <li>
+                    Did it perform as well as you hoped?
+                  </li>
+                  <li>
+                    Were you following any of the suggested principles above?
+                  </li>
+                  <li>
+                    Are you going to be changing your passwords soon?
+                  </li>
+                </ul>
+              </div>
+  
+              <p class='note'>
+                For more informative and in-depth password guidelines, one can refer to <a href="https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-63-3.pdf" target="_blank">NIST password guidelines</a>.
+              </p>
+            </div><!-- explanations-->
+
+          </div><!-- card main-->
+        </div><!-- col md 8-->
+      </div><!-- row-->
+    </div><!-- container-->
   </body>
 </html>
