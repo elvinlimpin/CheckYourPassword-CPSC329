@@ -106,8 +106,6 @@ $(document).ready(() => {
     let LEARN_MORE_FLAG = false
 
     function showInfo() {
-        console.log($('#password-checks').html());
-
         if($('#password-checks').html() !== '' && !LEARN_MORE_FLAG) {
             $('.tips').show(500)
         } else {
