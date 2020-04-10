@@ -1,8 +1,8 @@
 # CheckYourPassword-CPSC329
-Final project for Explorations in Information Security.
+Final project for Explorations in Information Security. We wanted to focus on instructing users how to create strong and memorable passwords through a password strength checker as well as a guide on how to create a strong but memorable password.
 
 # Hosting
-You can view the app here: https://checkyourpassword.web.app
+You can view the web app here: https://checkyourpassword.web.app
 
 # Developer Instructions
 1. Make sure to have node and npm installed on your computer
