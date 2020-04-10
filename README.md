@@ -1,7 +1,10 @@
 # CheckYourPassword-CPSC329
-Final project for Explorations in Information Security
+Final project for Explorations in Information Security.
 
-# Instructions
+# Hosting
+You can view the app here: https://checkyourpassword.web.app
+
+# Developer Instructions
 1. Make sure to have node and npm installed on your computer
 2. `npm install -g firebase-tools`
 3. `firebase login`
