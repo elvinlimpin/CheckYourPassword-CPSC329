@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Check how strong your password is</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Ubuntu:wght@500&display=swap" rel="stylesheet">
 
     <!-- update the version number as needed -->
     <script defer src="/__/firebase/7.12.0/firebase-app.js"></script>
@@ -13,16 +14,18 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js" integrity="sha256-FiZMk1zgTeujzf/+vomWZGZ9r00+xnGvOgXoj0Jo1jA=" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js" integrity="sha256-G7A4JrJjJlFqP0yamznwPjAApIKPkadeHfyIwiaa9e0=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" integrity="sha256-PHcOkPmOshsMBC+vtJdVr5Mwb7r0LkSVJPlPrp/IMpU=" crossorigin="anonymous" />
     <script
       src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
       integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
       crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/5fcc75ba7e.js" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="/css/style.css">
+    
 
   </head>
   <body>
@@ -31,27 +34,32 @@
         <div class="col-md-2"></div>
         <div class="col-md-8">
           <div class="left-bar card card-body bg-light  card-main">
-            <h4 class="card-title">Check You Password Strength</h4>
+            <br>
+            <h4 class="card-title">Check Your Password Strength</h4>
             <br>
             <br>
             <h6
-              style="text-align: center"
-            >Lets get you started by entering your password below:</h6>
+            style="text-align: center"
+            >Let's get you started by entering your password below:</h6>
             <br>
             <input
               id="password-box"
               type="password"
               style="width:100%"
             />
-            <div id="password-time" class="hsimp-time"></div>
+            <div style="margin-top:12px" id="password-time" class="hsimp-time"></div>
             <ul id="password-checks" class="hsimp-checks"></ul>
-
+            <p style="text-align:right" class="smaller">
+              <span class="smaller">
+                The password checker assumes 1 billion calculations per second.
+              </span>
+            </p>
             <div class='tips'>
               <br>
               <h6>How was the strength of your password?</h6>
               <p>If this is not what you expected, click learn more for information on how to improve your password.</p>
               <p style="text-align: center" >
-                <a href="#explanations" id="learn-more">Learn More</a>
+                <a href="#" id="learn-more">Learn More</a>
               </p>
             </div>
 
@@ -59,6 +67,10 @@
             <script src="/js/script.js"></script>
             <div id="explanations">
               <hr>
+              <h6
+              style="text-align: center; margin-bottom: 12px"
+              
+              >How to create a strong but memorable password</h6>
               <p>
                 Us human beings are very inclined to use passwords that contain common dictionary words. This especially applies to English words, mainly because English is a universal language (especially on the internet), which greatly increases the chance of many different users using the same words in their passwords. But this shouldn’t stop you from trying to create good memorable passwords. There are passwords which are easy for humans to remember, but very difficult for computers to crack.
               </p>
@@ -124,9 +136,9 @@
                     <div class="smaller" id="citations">
                       <p>These principles are inspired by the following:</p>
                       <p>
-                        [1]<a href="https://blog.avast.com/strong-password-ideas">https://blog.avast.com/strong-password-ideas</a>
-                        <br>[2]<a href="https://privacyrights.org/resources/10-rules-creating-hacker-resistant-password">https://privacyrights.org/resources/10-rules-creating-hacker-resistant-password</a>
-                        <br>[3]<a href="https://www.avg.com/en/signal/how-to-create-a-strong-password-that-you-wont-forget">https://www.avg.com/en/signal/how-to-create-a-strong-password-that-you-wont-forget</a>
+                        [1]<a target="_blank" href="https://blog.avast.com/strong-password-ideas">https://blog.avast.com/strong-password-ideas</a>
+                        <br>[2]<a target="_blank" href="https://privacyrights.org/resources/10-rules-creating-hacker-resistant-password">https://privacyrights.org/resources/10-rules-creating-hacker-resistant-password</a>
+                        <br>[3]<a target="_blank" href="https://www.avg.com/en/signal/how-to-create-a-strong-password-that-you-wont-forget">https://www.avg.com/en/signal/how-to-create-a-strong-password-that-you-wont-forget</a>
                         <br>[4] This is an editorial idea we came up with.</a>
                       </div>
                   </div>
@@ -137,7 +149,9 @@
                 Now, to demonstrate power of some of the principles outlined above, try entering some of the following passwords to the strength checker above. (Some use none of the principles from above)
               </p>
               <p class="note">
-                <strong>Note:</strong> don't actually use any of these example passwords
+                <span class="smaller">
+                  <strong>Note:</strong> don't use any of the example passwords below.
+                </span>
               </p>
   
               <div class="left-bar card card-body">
@@ -209,6 +223,7 @@
                   <li>
                     The more special the sequence, the better
                   </li>
+                  <li>
                     This set of moves is actually not an <a href="https://en.wikipedia.org/wiki/Bogo-Indian_Defence" target="_blank">uncommon sequence</a>
                   </li>
                 </ul>
@@ -258,8 +273,20 @@
                 </ul>
               </div>
   
-              <p class='note'>
-                For more informative and in-depth password guidelines, one can refer to <a href="https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-63-3.pdf" target="_blank">NIST password guidelines</a>.
+              <p class="note">
+                <span class="smaller">
+                  <strong>Where can I learn more about passwords? </strong>
+                  Click here for the <a target="_blank" href="https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-63-3.pdf" target="_blank">NIST password guidelines</a>.
+                </span><br>
+                <span class="smaller">
+                  <strong>What's the background image? </strong> It's a word cloud of the top 10000 passwords. :)
+                </span><br>
+                <span class="smaller">
+                  <strong>Can I redo this password checker? </strong> Sure, just <a href="javascript:history.go(0)">refresh</a>.
+                </span>
+              </p>
+              <p class="note">
+
               </p>
             </div><!-- explanations-->
 

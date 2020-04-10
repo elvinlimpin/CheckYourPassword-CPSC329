@@ -5,7 +5,18 @@ var passwordInput = doc.getElementById("password-box"),
 
 // Code to render the time returned by HSIMP
 var renderTime = function (time, input) {
-    timeDiv.innerHTML = time || "";
+    timeDiv.innerHTML = (() => {
+        switch(time) {
+            case null:
+            case "":
+            case false:
+                        return ""
+            case "Immediately":
+                return "This password would be cracked <span class='mono'>immediately</span>."
+            default:
+            return "This password would take <span class='mono'>" + time + "</span> to crack."
+        }
+    })()
 };
 
 // Code to output the checks returned by HSIMP
@@ -78,7 +89,6 @@ $(document).ready(() => {
         
         const {result, textArea} = toClipboard(passwords[idx])
         
-        console.log($(`#${id}`).html())
         $(textArea).hide()
         $(`#${id}`).html('copied!')
 
@@ -93,9 +103,11 @@ $(document).ready(() => {
     $('.tips').hide()
     $('#explanations').hide()
 
-    const LEARN_MORE_FLAG = false
+    let LEARN_MORE_FLAG = false
 
     function showInfo() {
+        console.log($('#password-checks').html());
+
         if($('#password-checks').html() !== '' && !LEARN_MORE_FLAG) {
             $('.tips').show(500)
         } else {
@@ -107,7 +119,7 @@ $(document).ready(() => {
     $('#learn-more').click(() => {
         $('.tips').hide()
 
-        $('#explanations').show(1000)
+        $('#explanations').slideDown("slow")
         LEARN_MORE_FLAG = true
 
     })
