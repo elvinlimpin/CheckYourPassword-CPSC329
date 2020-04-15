@@ -106,16 +106,19 @@ $(document).ready(() => {
     let LEARN_MORE_FLAG = false
 
     function showInfo() {
-        if($('#password-checks').html() !== '' && !LEARN_MORE_FLAG) {
+        if(!$('#password-box').hasClass('hsimp-level--good')
+            && !LEARN_MORE_FLAG) {
+
             $('.tips').show(500)
+
         } else {
-            $('.tips').hide()
+            $('.tips').hide("fast")
         }
     }
     $('#password-checks').bind("DOMSubtreeModified", _.debounce(showInfo, 250))
 
     $('#learn-more').click(() => {
-        $('.tips').hide()
+        $('.tips').hide("fast")
 
         $('#explanations').slideDown("slow")
         LEARN_MORE_FLAG = true
@@ -126,16 +129,6 @@ $(document).ready(() => {
 // firebase
 
 document.addEventListener('DOMContentLoaded', function() {
-    // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-    // // The Firebase SDK is initialized and available here!
-    //
-    // firebase.auth().onAuthStateChanged(user => { });
-    // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-    // firebase.messaging().requestPermission().then(() => { });
-    // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-    //
-    // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-
     try {
       let app = firebase.app();
       let features = ['auth', 'database', 'messaging', 'storage'].filter(feature => typeof app[feature] === 'function');
