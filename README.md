@@ -12,7 +12,10 @@ You can view the web app here: https://checkyourpassword.web.app
 4. `firebase serve` - to view the repository
 
 # License
-Copied and modified by Elvin Limpin and Milan Karan.
+
+Check Your Password App by Elvin Limpin and Milan Karan is licensed under a Creative Commons Attribution 4.0 International License.
+
+Based on a work at `https://github.com/howsecureismypassword/hsimp`.
 
 The MIT License (MIT)
 
